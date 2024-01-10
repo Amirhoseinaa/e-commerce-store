@@ -15,12 +15,11 @@ mongoose
 
 // READ JSON FILE
 
-const laptops = JSON.parse(fs.readFileSync(`${__dirname}/example.json`, 'utf-8'));
+const laptops = JSON.parse(fs.readFileSync(`${__dirname}/laptop.json`, 'utf-8'));
 
 // IMPORT DATA INTO DB
 const importData = async () => {
 	try {
-		// FIXME:
 		await Laptop.create(laptops);
 		console.log('Data successfully loaded!');
 	} catch (err) {
@@ -32,7 +31,6 @@ const importData = async () => {
 // DELETE ALL DATA FROM DB
 const deleteData = async () => {
 	try {
-		// FIXME:
 		await Laptop.deleteMany();
 		console.log('Data successfully deleted!');
 	} catch (err) {

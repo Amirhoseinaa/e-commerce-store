@@ -9,7 +9,7 @@ const laptopSchema = new mongoose.Schema(
 			required: [true, 'لپ تاب باید نام داشته باشد'],
 			unique: true,
 			trim: true,
-			maxlength: [60, 'نام لپ تاب باید کمتر یا مساوی از 40 کاراکتر باشد'],
+			maxlength: [100, 'نام لپ تاب باید کمتر یا مساوی از 40 کاراکتر باشد'],
 			minlength: [10, 'نام لپ تاب باید بیش از 10 کاراکتر داشته باشد']
 		},
 		ratingsAverage: {

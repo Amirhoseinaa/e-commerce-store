@@ -1,3 +1,4 @@
+const cors = require('cors');
 const express = require('express');
 const morgan = require('morgan');
 
@@ -6,8 +7,9 @@ const globalErrorHandler = require('./controllers/error-controller');
 const laptopRouter = require('./routes/laptop-route');
 
 const app = express();
-
 ///////////////////// GLOBAL MIDDLEWARES
+
+app.use(cors());
 
 // Development logging
 if (process.env.NODE_ENV === 'development') {
