@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import axiosInstance from '../services/api-client';
 
-const GetAllLaptopsFeatures = () => {
+const MyComponent = () => {
 	const [data, setData] = useState(null);
 
 	// Filtering
@@ -20,11 +20,11 @@ const GetAllLaptopsFeatures = () => {
 						// price: 559400000
 						//
 						// قیمت بالاتر
-						// price: {
-						// 	gte: 559400000
-						// }
+						price: {
+							gte: 559400000
+						}
 						//
-						// قیمت بالاتر
+						// قیمت پایینتر
 						// price: {
 						// 	lte: 559400000
 						// }
@@ -46,7 +46,7 @@ const GetAllLaptopsFeatures = () => {
 			<ul className="list-group">
 				{data?.map((item) => (
 					<li key={item.id} className="list-group-item">
-						{item.name}
+						{item.price} {item.name}
 					</li>
 				))}
 			</ul>
@@ -54,4 +54,4 @@ const GetAllLaptopsFeatures = () => {
 	);
 };
 
-export default GetAllLaptopsFeatures;
+export default MyComponent;

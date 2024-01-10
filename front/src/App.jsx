@@ -1,10 +1,13 @@
 // import GetAllLaptops from './components/GetAllLaptops';
-import GetAllLaptopsFeatures from './components/GetAllLaptopsFeatures';
+// import ApiFeatureFilter from './components/ApiFeatureFilter';
+// import ApiFeatureSort from './components/ApiFeatureSort';
 
 const App = () => {
 	return (
 		<div>
-			<GetAllLaptopsFeatures />
+			{/* <GetAllLaptops /> */}
+			{/* <ApiFeatureFilter /> */}
+			{/* <ApiFeatureSort /> */}
 		</div>
 	);
 };

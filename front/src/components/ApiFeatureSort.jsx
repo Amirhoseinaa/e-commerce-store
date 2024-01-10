@@ -7,7 +7,22 @@ const MyComponent = () => {
 	useEffect(() => {
 		const fetchData = async () => {
 			try {
-				const response = await axiosInstance.get('/products/laptop');
+				const response = await axiosInstance.get('/products/laptop', {
+					// مرتب سازی بر اساس قیمت نزولی
+					params: {
+						sort: '-price'
+					}
+					//
+					// مرتب سازی بر اساس قیمت صعودی
+					// params: {
+					// 	sort: 'price'
+					// }
+					//
+					// مرتب سازی ترکیبی بر اساس قیمت و امتیاز
+					// params: {
+					// 	sort: '-ratingsAverage,price'
+					// }
+				});
 				setData(response.data.data.data);
 
 				console.log(response.data.data.data);
@@ -24,7 +39,7 @@ const MyComponent = () => {
 			<ul className="list-group">
 				{data?.map((item) => (
 					<li key={item.id} className="list-group-item">
-						{item.name}
+						{item.price} {item.name}
 					</li>
 				))}
 			</ul>
