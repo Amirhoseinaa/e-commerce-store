@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import axiosInstance from '../services/api-client';
 
-const MyComponent = () => {
+const GetAllLaptops = () => {
 	const [data, setData] = useState(null);
 
 	useEffect(() => {
@@ -32,4 +32,4 @@ const MyComponent = () => {
 	);
 };
 
-export default MyComponent;
+export default GetAllLaptops;

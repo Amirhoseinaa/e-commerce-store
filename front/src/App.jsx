@@ -1,9 +1,10 @@
-import GetAllLaptops from './components/GetAllLaptops';
+// import GetAllLaptops from './components/GetAllLaptops';
+import GetAllLaptopsFeatures from './components/GetAllLaptopsFeatures';
 
 const App = () => {
 	return (
 		<div>
-			<GetAllLaptops />
+			<GetAllLaptopsFeatures />
 		</div>
 	);
 };
